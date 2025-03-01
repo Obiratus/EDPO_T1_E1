@@ -12,7 +12,7 @@ services:
       - 7203:7203
     environment:
  #     KAFKA_ADVERTISED_HOST_NAME: 192.168.178.31
-      KAFKA_ADVERTISED_HOST_NAME: localhost
+      KAFKA_ADVERTISED_HOST_NAME: 192.168.1.173
       KAFKA_ADVERTISED_PORT: 9092
       ALLOW_PLAINTEXT_LISTENER: yes
       KAFKA_CFG_LISTENERS: PLAINTEXT://:9092
@@ -20,3 +20,13 @@ services:
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
     depends_on:
       - zookeeper
+
+  cadvisor:
+    image: gcr.io/cadvisor/cadvisor:latest # Google cAdvisor image
+    ports:
+      - 8080:8080
+    volumes:
+      - /:/rootfs:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - /sys:/sys:ro
+      - /var/lib/docker/:/var/lib/docker:ro
