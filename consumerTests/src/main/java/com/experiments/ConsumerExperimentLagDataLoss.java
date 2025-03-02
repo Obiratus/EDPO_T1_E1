@@ -21,8 +21,8 @@ public class ConsumerExperimentLagDataLoss {
 
     public static void main(String[] args) throws Exception {
         // Define stepwise processing delays (in ms) and messages per second (rates)
-        int[] processingDelays = {0, 200, 400};
-        int[] messagesPerSecondRates = {10, 100, 1000};
+        int[] processingDelays = {0, 200, 400, 600};
+        int[] messagesPerSecondRates = {500, 1000, 1500};
 
         String topic = "click-events"; // Target Kafka topic
 
