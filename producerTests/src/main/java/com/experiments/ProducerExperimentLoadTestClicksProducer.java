@@ -1,4 +1,4 @@
-package com.examples;
+package com.experiments;
 
 import com.data.Clicks;
 import com.google.common.io.Resources;
@@ -9,6 +9,7 @@ import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.common.errors.TopicExistsException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import com.stats.*;
 
 import java.io.InputStream;
 import java.util.*;

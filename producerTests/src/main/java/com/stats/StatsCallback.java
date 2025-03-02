@@ -1,4 +1,4 @@
-package com.examples;
+package com.stats;
 
 import com.github.dockerjava.api.async.ResultCallbackTemplate;
 import com.github.dockerjava.api.model.Statistics;

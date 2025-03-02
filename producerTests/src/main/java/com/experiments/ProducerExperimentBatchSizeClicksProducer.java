@@ -1,4 +1,4 @@
-package com.examples;
+package com.experiments;
 
 import com.data.Clicks;
 import com.google.common.io.Resources;
